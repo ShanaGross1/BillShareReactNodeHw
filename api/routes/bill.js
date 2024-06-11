@@ -11,8 +11,6 @@ router.get('/getall', async (req, res) => {
 })
 
 router.get('/getBillWithParticipants/:id', async (req, res) => {
-    console.log('in back leverl')
-
     const bill = await db.getBillWithParticipants(req.params.id);
     res.json(bill);
 })
